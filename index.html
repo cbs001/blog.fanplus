@@ -1,1 +1,84 @@
-啥也没有
+<!DOCTYPE html>
+<html>
+	<link rel="shortcut icon" href="https://pic.imgdb.cn/item/651fa444c458853aef9ac415.png">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="Fan Blog">
+		<title>Fpp Judge Download</title>
+		<script>
+			'use strict';
+			// 下滑时，标题栏自动出现阴影
+			window.onscroll=function(){
+				let tmp = document.getElementsByClassName("title");
+				if(window.scrollY > 10) tmp[0].style.boxShadow = "0px 0px 15px #000";
+				else tmp[0].style.boxShadow = "0px 0px 0px #000";
+			};
+			</script>
+		<script>
+			'use strict';
+			function _hide(a){
+				document.getElementById("blog"+a).style.display = "none";
+			}
+			function _show(a){
+				document.getElementById("blog"+a).style.display = "block";
+			}
+			function to(a){
+				document.getElementById("main").style.display = "none";
+				_show(a);
+			}
+			function tohome(){
+				document.getElementById("main").style.display = "block";
+				for(let i=1; i<=2; i++) _hide(i);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="title"><h1>&nbsp;帆 Blog</h1></div>
+		<p style="margin-bottom:55px">&nbsp;</p>
+		<div id="main">
+			<div class="card" onclick="to(1);">
+				超级劣质博客
+			</div>
+			<div class="card" onclick="to(2);">
+				测试
+			</div>
+		</div>
+		<div id="blog1" style="display:none;">
+			<div class="card">
+				哈哈哈，这篇博客里什么都没有
+			</div>
+			<button onclick="tohome();">返回</button>
+		</div>
+		<div id="blog2" style="display:none;">
+			<div class="card">
+				114514<br>
+				114514<br>
+				114514<br>
+				114514<br>
+				114514<br>
+				114514<br>
+			</div>
+			<button onclick="tohome();">返回</button>
+		</div>
+	</body>
+</html>
+<style>
+	body{
+		background: #EEEEEE;
+	}
+	/*题目*/
+	.title{ 
+		width: 100%;
+		background: #FFFFFF;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+ 	/*卡片*/
+	.card{
+		width: 100%;
+		margin-top: 10px;
+		background: #DDDDDD;
+		padding: 5px;
+	}
+</style>
