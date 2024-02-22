@@ -1,84 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<link rel="shortcut icon" href="https://pic.imgdb.cn/item/651fa444c458853aef9ac415.png">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="keywords" content="Fan Blog">
-		<title>Fpp Judge Download</title>
-		<script>
-			'use strict';
-			// 下滑时，标题栏自动出现阴影
-			window.onscroll=function(){
-				let tmp = document.getElementsByClassName("title");
-				if(window.scrollY > 10) tmp[0].style.boxShadow = "0px 0px 15px #000";
-				else tmp[0].style.boxShadow = "0px 0px 0px #000";
-			};
-			</script>
-		<script>
-			'use strict';
-			function _hide(a){
-				document.getElementById("blog"+a).style.display = "none";
-			}
-			function _show(a){
-				document.getElementById("blog"+a).style.display = "block";
-			}
-			function to(a){
-				document.getElementById("main").style.display = "none";
-				_show(a);
-			}
-			function tohome(){
-				document.getElementById("main").style.display = "block";
-				for(let i=1; i<=2; i++) _hide(i);
-			}
-		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="blog-uid" content="756064">
+		<meta name="blog-name" content="Welcome">
+		<meta name="current-user" content="">
+		<title>文章列表 - Welcome - Fan博客</title>
+		<link rel="stylesheet" href="https://www.luogu.com.cn/static/blog/ant/katex.css">
+		<link rel="stylesheet" href="https://www.luogu.com.cn/static/blog/ant/common.css">
 	</head>
 	<body>
-		<div class="title"><h1>&nbsp;帆 Blog</h1></div>
-		<p style="margin-bottom:55px">&nbsp;</p>
-		<div id="main">
-			<div class="card" onclick="to(1);">
-				超级劣质博客
+		<main>
+			<div class="ant-row-flex ant-row-flex-center"style="background: rgb(236, 236, 236); padding: 30px; min-height: 100vh;">
+				<div class="authorinfo-padding ant-col ant-col-8">
+					<div class="ant-card ant-card-bordered" style="width: 100%;">
+						<div class="ant-card-body">
+							<div class="ant-row-flex ant-row-flex-center">
+								<div class="ant-col">
+									<div class="author-title">
+									<span class="avatar-left ant-avatar ant-avatar-circle ant-avatar-image" style="width: 96px; height: 96px; line-height: 96px; font-size: 18px;">
+										<img src="https://cdn.luogu.com.cn/upload/usericon/756064.png">
+									</span>
+									<h3 class="text-center blog-name">Welcome</h3><!--简介改这里-->
+									<h4 class="text-center">我们来自浙江温州</h4>
+									<h4 class="text center">这里是 Fanplus 工作室的博客</h4>
+								</div>
+								<div role="separator" class="ant-divider ant-divider-horizontal ant-divider-dashed"></div>
+								<div>
+									<ul role="menu" class="menu ant-menu ant-menu-vertical ant-menu-root ant-menu-light">
+										<li role="menuitem" class="ant-menu-item">
+											<i aria-label="icon: tag" class="anticon anticon-tag">
+												<svg viewBox="64 64 896 896" data-icon="tag" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class="">
+													<path d="M938 458.8l-29.6-312.6c-1.5-16.2-14.4-29-30.6-30.6L565.2 86h-.4c-3.2 0-5.7 1-7.6 2.9L88.9 557.2a9.96 9.96 0 0 0 0 14.1l363.8 363.8c1.9 1.9 4.4 2.9 7.1 2.9s5.2-1 7.1-2.9l468.3-468.3c2-2.1 3-5 2.8-8zM459.7 834.7L189.3 564.3 589 164.6 836 188l23.4 247-399.7 399.7zM680 256c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm0 120c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z">
+													</path>
+												</svg>
+											</i>所有类型
+										</li>
+									</ul>
+								</div>
+								<div role="separator" class="ant-divider ant-divider-horizontal ant-divider-dashed"></div>
+								<span class="input-search ant-input-search ant-input-affix-wrapper">
+									<input placeholder="input search text" type="text" class="ant-input">
+									<span class="ant-input-suffix">
+										<i aria-label="icon: search" tabindex="-1" class="anticon anticon-search ant-input-search-icon">
+											<svg viewBox="64 64 896 896" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class="">
+												<path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+											</svg>
+										</i>
+									</span>
+								</span>
+								<div role="separator" class="ant-divider ant-divider-horizontal ant-divider-dashed"></div>
+								<div class="footer-info"><!--友链在这里-->
+									<div class="text-center">
+										<a href="https://www.luogu.com.cn/" class="item">Luogu</a>
+										<div role="separator" class="ant-divider ant-divider-vertical"></div>
+										<a href="https://wzoi.cc/" class="item">WZOI</a>
+										<div role="separator" class="ant-divider ant-divider-vertical"></div>
+										<a href="https://github.com/" class="item">GitHub</a>
+										<div role="separator" class="ant-divider ant-divider-vertical"></div>
+										<a href="https://loj.ac/" class="item">loj</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="card" onclick="to(2);">
-				测试
+			<div class="ant-col ant-col-16" style="padding-left: 16px;">
+				<div class="article-body-top ant-card ant-card-bordered" style="width: 100%;">
+					<div class="ant-card-head"><div class="ant-card-head-wrapper">
+						<div class="ant-card-head-title">文章 (0)</div>
+					</div>
+				</div>
+				<div class="ant-card-body">
+					<p>
+						<div class="ant-list ant-list-split">
+							<div class="ant-spin-nested-loading">
+								<div class="ant-spin-container">
+									<!-- <div class="ant-list-empty-text">
+										<div class="ant-empty ant-empty-normal">
+											<div class="ant-empty-image">
+												<svg width="64" height="41" viewBox="0 0 64 41" xmlns="http://www.w3.org/2000/svg">
+													<g transform="translate(0 1)" fill="none" fillRule="evenodd">
+														<ellipse fill="#F5F5F5" cx="32" cy="33" rx="32" ry="7"></ellipse>
+													<g fillRule="nonzero" stroke="#D9D9D9">
+														<path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z"></path>
+														<path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" fill="#FAFAFA"></path></g></g></svg></div><p class="ant-empty-description">No Data</p>
+											</div>
+										</div>
+									</div> 空的用这段 empty标识 -->
+									<ul class="ant-list-items">
+										<li class="ant-list-item">
+											<div class="ant-col">
+												<h4 class="ant-list-item-meta-title">
+													<a href="https://fanplus.top"style="font-weight: bold;">主页</a>
+												</h4>
+												<div class="ant-list-item-meta-description">
+													<span class="ant-tag">主页</span>
+												</div>
+												<div class="article-content ant-row">这里是 Fanplusplus 的宣传主页！
+												</div>
+												<div class="ant-row">
+													<a href="https://www.luogu.com.cn/user/756064">wyf1202</a>
+													<span class="inline-padding">发布于</span>
+													<span class="text-grey">2024-02-19 16:04:51</span>
+												</div>
+											</div>
+										</li>
+									</ul><!--第1个blog-->
+								</div>
+							</div>
+						</div>
+					</p>
+					<div role="separator" class="ant-divider ant-divider-horizontal"></div>
+					<div class="ant-row-flex ant-row-flex-center">
+						<div class="ant-col"></div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div id="blog1" style="display:none;">
-			<div class="card">
-				哈哈哈，这篇博客里什么都没有
-			</div>
-			<button onclick="tohome();">返回</button>
-		</div>
-		<div id="blog2" style="display:none;">
-			<div class="card">
-				114514<br>
-				114514<br>
-				114514<br>
-				114514<br>
-				114514<br>
-				114514<br>
-			</div>
-			<button onclick="tohome();">返回</button>
-		</div>
+		</main>
+		<script>
+			var BlogGlobals = {
+				blogName: "Welcome",
+				blogUID: 756064,
+				currentUser: 756064,
+				picAddress: 'https://cdn.luogu.com.cn'
+			}
+		</script>
+		<script src="https://www.luogu.com.cn/static/blog/ant/common.js"></script>
+		<script src="https://www.luogu.com.cn/static/blog/ant/article_list.js"></script>
 	</body>
 </html>
-<style>
-	body{
-		background: #EEEEEE;
-	}
-	/*题目*/
-	.title{ 
-		width: 100%;
-		background: #FFFFFF;
-		position: fixed;
-		top: 0;
-		left: 0;
-	}
- 	/*卡片*/
-	.card{
-		width: 100%;
-		margin-top: 10px;
-		background: #DDDDDD;
-		padding: 5px;
-	}
-</style>
